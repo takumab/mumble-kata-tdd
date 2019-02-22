@@ -25,18 +25,24 @@ describe Mumble do
   context 'when ab' do
     let(:str) { 'ab'}
 
-    it { is_expected.to eq('A-BB') }
+    it { is_expected.to eq('A-Bb') }
   end
 
   context 'when ac' do
     let(:str) { 'ac'}
 
-    it { is_expected.to eq('A-CC') }
+    it { is_expected.to eq('A-Cc') }
   end
 
   context 'when abc' do
     let(:str) { 'abc'}
 
-    it { is_expected.to eq('A-BB-CCC') }
+    it { is_expected.to eq('A-Bb-Ccc') }
+  end
+
+  context 'when QWERTY' do
+    let(:str) { 'QWERTY'}
+
+    it { is_expected.to eq('Q-Ww-Eee-Rrrr-Ttttt-Yyyyyy') }
   end
 end
