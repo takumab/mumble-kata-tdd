@@ -25,12 +25,18 @@ describe Mumble do
   context 'when ab' do
     let(:str) { 'ab'}
 
-    it { is_expected.to eq('ABB') }
+    it { is_expected.to eq('A-BB') }
   end
 
   context 'when ac' do
     let(:str) { 'ac'}
 
-    it { is_expected.to eq('ACC') }
+    it { is_expected.to eq('A-CC') }
+  end
+
+  context 'when abc' do
+    let(:str) { 'abc'}
+
+    it { is_expected.to eq('A-BB-CCC') }
   end
 end
